@@ -1,0 +1,37 @@
+<ion-navbar *navbar hideBackButton primary>
+  <button menuToggle>
+    <ion-icon name='menu'></ion-icon>
+  </button>
+
+  <ion-title>
+    Snooker Counter
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="counter-page">
+  <ion-card *ngFor="#player of players">
+      <ion-card-header>
+          <h2 (click)="changeName(player)">{{ player.name }}</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+          <h3>Total Score: {{ calculateScore(player) }}</h3>
+          <div>
+              <div>Balls:</div>
+              <span *ngFor="#ball of player.balls; #i = index"
+                    (click)="removeBall(player, i)"
+                    class="ball margin {{ ball }}"></span>
+
+          </div>
+          <hr />
+          <h3>Add Ball:</h3>
+          <table class="add-ball-table">
+              <tr>
+                  <td *ngFor="#color of colors">
+                      <span class="ball {{ color }}" (click)="addBall(player, color)"></span>
+                  </td>
+              </tr>
+          </table>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

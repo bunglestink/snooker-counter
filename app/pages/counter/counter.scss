@@ -1,0 +1,22 @@
+.counter-page {
+    .ball {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+    }
+
+    .add-ball-table {
+        width: 100%;
+
+        td {
+            text-align: center;
+        }
+    }
+
+    .margin {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
